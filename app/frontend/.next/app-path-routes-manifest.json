@@ -1,0 +1,12 @@
+{
+  "/robots.txt/route": "/robots.txt",
+  "/opengraph-image.jpg/route": "/opengraph-image.jpg",
+  "/(marketing)/page": "/",
+  "/(protected)/dashboard/page": "/dashboard",
+  "/(auth)/login/page": "/login",
+  "/(marketing)/pricing/page": "/pricing",
+  "/(auth)/register/page": "/register",
+  "/(protected)/dashboard/settings/page": "/dashboard/settings",
+  "/(auth)/login/[userId]/[verificationToken]/page": "/login/[userId]/[verificationToken]",
+  "/(protected)/dashboard/app/[id]/page": "/dashboard/app/[id]"
+}
