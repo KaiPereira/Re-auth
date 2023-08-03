@@ -1,4 +1,4 @@
-// File: C:\Users\keira\Documents\VSCode Projects\Currently Working On\Cipher\App\frontend\app\(auth)\layout.tsx
+// File: C:\Users\keira\Documents\VSCode Projects\Currently Working On\sentinel\app\frontend\app\(auth)\layout.tsx
 import * as entry from '../../../../app/(auth)/layout.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

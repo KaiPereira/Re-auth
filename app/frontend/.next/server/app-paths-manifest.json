@@ -1,5 +1,12 @@
 {
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/opengraph-image.jpg/route": "app/opengraph-image.jpg/route.js",
   "/(marketing)/page": "app/(marketing)/page.js",
   "/(protected)/dashboard/page": "app/(protected)/dashboard/page.js",
-  "/(auth)/login/page": "app/(auth)/login/page.js"
+  "/(auth)/login/page": "app/(auth)/login/page.js",
+  "/(auth)/register/page": "app/(auth)/register/page.js",
+  "/(marketing)/pricing/page": "app/(marketing)/pricing/page.js",
+  "/(protected)/dashboard/settings/page": "app/(protected)/dashboard/settings/page.js",
+  "/(auth)/login/[userId]/[verificationToken]/page": "app/(auth)/login/[userId]/[verificationToken]/page.js",
+  "/(protected)/dashboard/app/[id]/page": "app/(protected)/dashboard/app/[id]/page.js"
 }
