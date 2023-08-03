@@ -10,7 +10,7 @@ defaults:
 
 jobs:
   deploy:
-    name: Deploy backend
+    name: Deploy app backend
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
