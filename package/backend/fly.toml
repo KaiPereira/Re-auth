@@ -1,0 +1,18 @@
+# fly.toml app configuration file generated for sentinel-package-backend on 2023-08-03T13:14:18-07:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "sentinel-package-backend"
+primary_region = "ord"
+
+[env]
+  PORT = "8080"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]

@@ -1,3 +1,5 @@
+# In my vercel project settings I have it configured to auto go to app/frontend
+
 name: Deploying the Frontend of the App
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}

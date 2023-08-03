@@ -10,7 +10,10 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.1",
     "mongoose": "^7.4.1",
-    "resend": "^0.17.2"
+    "resend": "^0.17.2",
+    "typescript": "^5.1.6",
+    "concurrently": "^8.2.0",
+    "nodemon": "^3.0.1"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
@@ -21,12 +24,11 @@
     "@types/jsonwebtoken": "^9.0.2",
     "@types/mongoose": "^5.11.97",
     "@types/node": "^20.4.5",
-    "@types/react": "^18.2.18",
-    "concurrently": "^8.2.0",
-    "nodemon": "^3.0.1"
+    "@types/react": "^18.2.18"
   },
   "scripts": {
     "build": "tsc",
-    "dev": "concurrently \"tsc -w\" \"nodemon dist/js/app.js\""
+    "dev": "concurrently \"tsc -w\" \"nodemon dist/js/app.js\"",
+    "start": "concurrently \"tsc -w\" \"nodemon dist/js/app.js\""
   }
 }
