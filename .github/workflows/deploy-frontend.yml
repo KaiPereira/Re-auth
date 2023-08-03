@@ -2,7 +2,7 @@ name: Deploying the Frontend of the App
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-  
+
 on:
   push:
     branches:
@@ -10,7 +10,7 @@ on:
 
 defaults: 
   run:
-    working-directory: ./app/frontend
+    working-directory: app/frontend
 
 jobs:
   Deploy-Production:
