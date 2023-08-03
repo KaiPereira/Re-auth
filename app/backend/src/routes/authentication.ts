@@ -20,7 +20,7 @@ router.post("/register", async (req: Request, res: Response) => {
             email: req.body.email
         })
 
-        if (!emailExists) return res.status(400).send("Email already exists!")
+        if (emailExists) return res.status(400).send("Email already exists!")
         
         // Hash password
         const hashedPassword = hashString(req.body.password)
@@ -28,7 +28,7 @@ router.post("/register", async (req: Request, res: Response) => {
         // Create User
         const newUser: UserType = await new User({
             email: req.body.email.toLowerCase(),
-            password: hashedPassword
+            password: hashedPassword 
         }).save()
 
         // Create token

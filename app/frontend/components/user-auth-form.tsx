@@ -21,6 +21,8 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
   const { error, handleLogin, handleSignup, response, isSignedIn } = useAuth()
   useListenForError({error: error, success: response})
   const router = useRouter()
+
+  console.log(values)
   
   const handleAuth = (e: any) => {
     e.preventDefault()
@@ -42,7 +44,7 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
       .catch((err) => {
         console.log(err)
       })
-  }, [isSignedIn])
+  }, [])
 
   return (
     <div className={cn("grid gap-6", className)} {...props}>

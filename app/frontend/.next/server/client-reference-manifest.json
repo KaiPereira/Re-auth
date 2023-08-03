@@ -79,6 +79,22 @@
         "chunks": [],
         "async": false
       }
+    },
+    "(app-client)/./components/user-auth-form.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/user-auth-form.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/(auth)/login/[userId]/[verificationToken]/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/(auth)/login/[userId]/[verificationToken]/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
     }
   },
   "edgeSSRModuleMapping": {},
@@ -167,7 +183,7 @@
       "id": "(app-client)/./node_modules/next/dist/client/link.js",
       "name": "*",
       "chunks": [
-        "app/(marketing)/page:static/chunks/app/(marketing)/page.js"
+        "app/(auth)/register/page:static/chunks/app/(auth)/register/page.js"
       ],
       "async": false
     },
@@ -175,7 +191,7 @@
       "id": "(app-client)/./node_modules/next/dist/client/link.js",
       "name": "*",
       "chunks": [
-        "app/(marketing)/page:static/chunks/app/(marketing)/page.js"
+        "app/(auth)/register/page:static/chunks/app/(auth)/register/page.js"
       ],
       "async": false
     },
@@ -234,13 +250,33 @@
         "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
+    },
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\components\\user-auth-form.tsx": {
+      "id": "(app-client)/./components/user-auth-form.tsx",
+      "name": "*",
+      "chunks": [
+        "app/(auth)/register/page:static/chunks/app/(auth)/register/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(auth)\\login\\[userId]\\[verificationToken]\\page.tsx": {
+      "id": "(app-client)/./app/(auth)/login/[userId]/[verificationToken]/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/(auth)/login/[userId]/[verificationToken]/page:static/chunks/app/(auth)/login/[userId]/[verificationToken]/page.js"
+      ],
+      "async": false
     }
   },
   "entryCSSFiles": {
     "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(marketing)\\layout": [],
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(marketing)\\page": [],
     "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\layout": [
       "static/css/app/layout.css"
     ],
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(marketing)\\page": []
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(auth)\\layout": [],
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(auth)\\login\\page": [],
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(auth)\\register\\page": [],
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(auth)\\login\\[userId]\\[verificationToken]\\page": []
   }
 }
