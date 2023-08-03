@@ -10,7 +10,7 @@ on:
 
 defaults: 
   run:
-    working-directory: ./app/frontend
+    working-directory: app/frontend
 
 jobs:
   Deploy-Production:
