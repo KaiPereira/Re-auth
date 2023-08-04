@@ -1,7 +1,7 @@
 import { SiteConfig } from "@/types"
 
 export const siteConfig: SiteConfig = {
-  name: "Sentinel",
+  name: "Bastion",
   description:
     "The revolutionary easy-to-use authentication system for developers, prioritizing simplicity and ease.",
   url: "https://tx.shadcn.com",

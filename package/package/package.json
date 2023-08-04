@@ -1,5 +1,5 @@
 {
-  "name": "cipher",
+  "name": "bastion",
   "version": "1.0.0",
   "description": "An authentication solution for developers",
   "main": "dist/bundle.js",
