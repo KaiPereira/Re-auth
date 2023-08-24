@@ -1,4 +1,4 @@
-import axios, { AxiosInstance } from "axios"
+import axios from "axios"
 
 
 const baseUrl = process.env.BASE_URL || "https://re-auth-production.up.railway.app/"
