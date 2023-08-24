@@ -18,14 +18,17 @@ export const decryptString = (string: string) => {
 
 export const connectToUserDb = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const apiKey = req.headers.authorization
+        let apiKey = req.headers.authorization
+
+        if (!apiKey) return res.status(401).send("An api key is required!")
+
         const platformApi = process.env.PLATFORM_API
 
         const { data } = await axios.post(`${platformApi}/apps/get-app-via-key`, {
             apiKey: apiKey
         })
 
-        if (!data) res.status(401).send("A valid api key is required!")
+        if (!data) return res.status(401).send("A valid api key is required!")
 
         const mongoDbSrv = decryptString(data.srvString)
 

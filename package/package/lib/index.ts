@@ -1,21 +1,20 @@
 import axios, { AxiosInstance } from "axios"
 
-const baseUrl = process.env.BASE_URL || "https://"
 
-var apiKeyConfig: string | null = null
+const baseUrl = process.env.BASE_URL || "https://re-auth-production.up.railway.app/"
 
-export const config = (apiKey: string) => {
-    apiKeyConfig = apiKey
-    axios.defaults.baseURL = baseUrl; // Replace with your API base URL
-    axios.defaults.headers.common["Authorization"] = apiKey;
-}
+var apiKey: string | undefined = process.env.REAUTH_API_KEY
+
+axios.defaults.baseURL = baseUrl; // Replace with your API base URL
+axios.defaults.headers.common["Authorization"] = apiKey;
+
 
 export const checkApiKey = () => {
-    if (!apiKeyConfig) throw "No api key was specified in the config file. Remember to create one on the platform!"
+    if (!apiKey) throw "No API Key was found! Remember to add it to your .env file under REAUTH_API_KEY"
 }
 
 
-export const login = async (email: string, password: string) => {
+export const loginUserWithEmailPassword = async (email: string, password: string) => {
     try {
         checkApiKey()
 
@@ -30,13 +29,14 @@ export const login = async (email: string, password: string) => {
     }
 }
 
-export const register = async (email: string, password: string) => {
+export const registerUserWithEmailPassword = async (email: string, password: string) => {
     try {
         checkApiKey()
 
         const user = await axios.post("/auth/register", {
             email: email,
-            password: password
+            password: password,
+            loginUrl: process.env.LOGIN_URL
         }, { withCredentials: true })
 
         return user.data
@@ -45,7 +45,7 @@ export const register = async (email: string, password: string) => {
     }
 }
 
-export const logout = async () => {
+export const logoutUser = async () => {
     try {
         checkApiKey()
 
@@ -57,7 +57,7 @@ export const logout = async () => {
     }
 }
 
-export const userDetails = async () => {
+export const getUserDetails = async () => {
     try {
         checkApiKey()
 
@@ -68,4 +68,3 @@ export const userDetails = async () => {
         throw err
     }
 }
-

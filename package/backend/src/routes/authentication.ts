@@ -10,7 +10,10 @@ router.post("/register", async (req, res) => {
     try {
         const email: string = req.body.email
         const password: string = req.body.password
+        const loginUrl: string = req.body.loginUrl
         const passwordHashed = hashString(password)
+
+        if (!loginUrl) return res.status(400).send("A login url was not specified in the application")
 
         // First we make sure the user doesn't already exist
         const userExists = await User.findOne({email: email})
@@ -30,7 +33,7 @@ router.post("/register", async (req, res) => {
         }).save()
 
         // Finally we send them a verification email
-        const message = `${req.headers.origin}/login/${newUser.id}/${newToken.token}`;
+        const message = `${req.body.loginUrl}/?userid=${newUser.id}&token=${newToken.token}`;
         await sendEmail(newUser.email, "Verify Email", message);
 
         res.send("User successfully created!")
@@ -84,20 +87,19 @@ router.post("/login", async (req, res) => {
             email: req.body.email.toLowerCase()
         })
 
-        if (user) {
+        // Check if user exists
+        if (!user) return res.status(400).send("Invalid username or password!")
 
-            if (!user.verified) return res.status(400).send("Please verify your email first!")
+        // Check if user is verified
+        if (!user.verified) return res.status(400).send("Please verify your email first!")
 
-            const validPass = await compareHash(req.body.password, user.password);
+        const validPass = await compareHash(req.body.password, user.password);
 
-            if (!validPass) return res.status(400).send("Invalid username or password!")
+        // Check if password is right
+        if (!validPass) return res.status(400).send("Invalid username or password!")
 
-            jwtCreation(res, user, "Successfully logged in!")
-        } else {
-            res.status(400).send("Invalid username or password!")
-        }
+        jwtCreation(res, user, "Successfully logged in!")
     } catch (err) {
-        console.log(err)
         res.status(400).send("Unknown Error has Occured!")
     }
 })

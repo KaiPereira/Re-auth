@@ -1,7 +1,7 @@
 import express from "express"
 import User from "../models/User"
 import { verifyUserToken } from "../utils/authentication.js"
-import { createApiKey, encryptString, hashString, compareHash } from "../utils/security"
+import { createApiKey, encryptString, hashString, compareHash, decryptString } from "../utils/security"
 import { creationDate } from "../utils/utils"
 import { Request, Response } from "express"
 import { UserType } from "../types/models"
@@ -156,7 +156,9 @@ router.post("/get-app-via-key", async (req: Request, res: Response) => {
 
         const users: UserType[] = await User.find()
 
-        const apiKey = req.body.apiKey
+        // The api key is encrypted when it comes in so we decrypt it
+        let apiKey = req.body.apiKey
+        apiKey = decryptString(apiKey)
 
 
         const userDetails = users.map((user) => {

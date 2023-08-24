@@ -64,6 +64,14 @@
         "async": false
       }
     },
+    "(app-client)/./components/main-nav.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/main-nav.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
     "(app-client)/./components/mode-toggle.tsx": {
       "*": {
         "id": "(sc_client)/./components/mode-toggle.tsx",
@@ -72,9 +80,41 @@
         "async": false
       }
     },
-    "(app-client)/./components/main-nav.tsx": {
+    "(app-client)/./components/user-auth-form.tsx": {
       "*": {
-        "id": "(sc_client)/./components/main-nav.tsx",
+        "id": "(sc_client)/./components/user-auth-form.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/(protected)/layout.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/(protected)/layout.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/(protected)/dashboard/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/(protected)/dashboard/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/(protected)/dashboard/settings/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/(protected)/dashboard/settings/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/(protected)/dashboard/app/[id]/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/(protected)/dashboard/app/[id]/page.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -207,7 +247,7 @@
       "id": "(app-client)/./node_modules/next/dist/client/link.js",
       "name": "*",
       "chunks": [
-        "app/(marketing)/page:static/chunks/app/(marketing)/page.js"
+        "app/(marketing)/pricing/page:static/chunks/app/(marketing)/pricing/page.js"
       ],
       "async": false
     },
@@ -215,7 +255,15 @@
       "id": "(app-client)/./node_modules/next/dist/client/link.js",
       "name": "*",
       "chunks": [
-        "app/(marketing)/page:static/chunks/app/(marketing)/page.js"
+        "app/(marketing)/pricing/page:static/chunks/app/(marketing)/pricing/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\components\\main-nav.tsx": {
+      "id": "(app-client)/./components/main-nav.tsx",
+      "name": "*",
+      "chunks": [
+        "app/(marketing)/layout:static/chunks/app/(marketing)/layout.js"
       ],
       "async": false
     },
@@ -227,11 +275,43 @@
       ],
       "async": false
     },
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\components\\main-nav.tsx": {
-      "id": "(app-client)/./components/main-nav.tsx",
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\components\\user-auth-form.tsx": {
+      "id": "(app-client)/./components/user-auth-form.tsx",
       "name": "*",
       "chunks": [
-        "app/(marketing)/layout:static/chunks/app/(marketing)/layout.js"
+        "app/(auth)/login/page:static/chunks/app/(auth)/login/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(protected)\\layout.tsx": {
+      "id": "(app-client)/./app/(protected)/layout.tsx",
+      "name": "*",
+      "chunks": [
+        "app/(protected)/layout:static/chunks/app/(protected)/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(protected)\\dashboard\\page.tsx": {
+      "id": "(app-client)/./app/(protected)/dashboard/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/(protected)/dashboard/page:static/chunks/app/(protected)/dashboard/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(protected)\\dashboard\\settings\\page.tsx": {
+      "id": "(app-client)/./app/(protected)/dashboard/settings/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/(protected)/dashboard/settings/page:static/chunks/app/(protected)/dashboard/settings/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(protected)\\dashboard\\app\\[id]\\page.tsx": {
+      "id": "(app-client)/./app/(protected)/dashboard/app/[id]/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/(protected)/dashboard/app/[id]/page:static/chunks/app/(protected)/dashboard/app/[id]/page.js"
       ],
       "async": false
     }
@@ -241,6 +321,13 @@
       "static/css/app/layout.css"
     ],
     "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(marketing)\\layout": [],
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(marketing)\\page": []
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(marketing)\\page": [],
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(auth)\\layout": [],
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(auth)\\login\\page": [],
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(protected)\\layout": [],
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(protected)\\dashboard\\page": [],
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(protected)\\dashboard\\settings\\page": [],
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(marketing)\\pricing\\page": [],
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(protected)\\dashboard\\app\\[id]\\page": []
   }
 }

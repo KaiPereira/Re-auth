@@ -5,10 +5,11 @@
         "outDir": "./dist",
         "strict": true,
         "esModuleInterop": true,
-        "declaration": true
+        "declaration": true,
+        "jsx": "react"
     },
     "include": [
-        "lib/**/*.ts"
+        "lib/**/*"
     ],
     "exclude": [
         "node_modules"

@@ -11,7 +11,7 @@ dotenv.config()
 const app = express()
 const port = process.env.PORT || 4000
 
-// Custom CORS middleware to set the origin dynamically
+// We are setting the origin to whatever the origin coming in is
 app.use((req, res, next) => {
     const allowedOrigins = [req.headers.origin]; // Use the request origin as the allowed origin    
     cors({

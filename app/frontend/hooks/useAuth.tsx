@@ -10,6 +10,7 @@ const useAuth = () => {
         signup(email, password)
             .then(res => {
                 setResponse("An email was sent to your inbox")
+                window.location.href = "/dashboard"
             })
             .catch(err => {
                 setError(err.response.data)
@@ -20,6 +21,7 @@ const useAuth = () => {
         signin(email, password)
             .then(res => {
                 setResponse("Successfully logged-in!")
+                window.location.href = "/dashboard"
             })
             .catch(err => {
                 setError(err.response.data)
