@@ -1,4 +1,4 @@
-name: Deploying the Package of the App
+name: Deploying the Package Backend of the App
 on:
   push:
     branches:

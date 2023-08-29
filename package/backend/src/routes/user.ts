@@ -8,6 +8,8 @@ router.post("/user-details", verifyUserToken, async (req, res) => {
     try {
         const user = req.user
 
+        console.log(user)
+
         res.send(user)
     } catch (err) {
         console.log(err)

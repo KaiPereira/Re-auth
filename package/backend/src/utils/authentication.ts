@@ -22,7 +22,7 @@ export const verifyUserToken = async (req: Request, res: Response, next: NextFun
         if (!verification) return res.status(401).send("Invalid authorization!")
 
         // Get the id from the jwt values
-        const user = await User.findById("64c5793a68d308a3d7ee5a77")
+        const user = await User.findById(verification.id)
 
         // Assign the user to the req.user property
         req.user = user
@@ -54,23 +54,3 @@ export const jwtCreation = async (res: Response, user: any, message: string) => 
         res.status(400).send("Authentication failed!")
     }
 }
-
-export const sendEmail = async (email: string, subject: string, text: string) => {
-  try {
-    const resend = new Resend(process.env.RESEND_API_KEY);
-
-    if (!process.env.RESEND_EMAIL) throw "Resend 'from' email not specified!"
-
-    resend.emails.send({
-      from: process.env.RESEND_EMAIL,
-      to: email,
-      subject: subject,
-      html: text
-    });
-
-    console.log("Email sent successfully")
-  } catch (err) {
-    console.log(err)
-    throw err
-  }
-};

@@ -36,6 +36,7 @@ export const connectToUserDb = async (req: Request, res: Response, next: NextFun
 
         next()
     } catch (err) {
+        console.log(err)
         res.status(400).send(err)
     }
 }
