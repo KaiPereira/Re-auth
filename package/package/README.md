@@ -1,30 +1,71 @@
-# re-authenticate
+# `Re-Auth`
 
-> Authentication for MongoDB and React
+Re-Auth is a React library and platform for implementing MongoDB authentication into your application.
 
-[![NPM](https://img.shields.io/npm/v/re-authenticate.svg)](https://www.npmjs.com/package/re-authenticate) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
-## Install
-
-```bash
-npm install --save re-authenticate
-```
+The Re-Auth package is extremely simple to use a setup for both React and NextJS!
 
 ## Usage
 
-```tsx
-import React, { Component } from 'react'
+### Installation
 
-import MyComponent from 're-authenticate'
-import 're-authenticate/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
+```js
+npm i re-authenticate
 ```
 
-## License
+### Wrap and configure the provider
 
-none © [kaipereira](https://github.com/kaipereira)
+To use the re-authenticate package, all you have to do is declare, configure and wrap your app root in it!
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import { AuthProvider } from "re-authenticate"
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <AuthProvider
+      apiKey="your_api_key_from_re-auth.com"
+    >
+      <App />
+    </AuthProvider>
+  </React.StrictMode>
+);
+```
+
+## Functions
+
+### React hook
+
+After configuring the application you get access to a react hook with all of the auth functions:
+
+```js
+import { useAuth } from "re-authenticate";
+
+function App() {
+  const { 
+    loginUserWithEmailPassword, 
+    registerUserWithEmailPassword,
+    logoutUser, 
+    getUserDetails 
+  } = useAuth()
+
+  return (
+    <>
+      
+    </>
+  );
+}
+
+export default App;
+```
+
+### Hook functions
+
+| Function | Description | Type |
+| ----- | ----- | ----- |
+| loginUserWithEmailPassword | Login in a user that's already in your database using email/password | (email: string, password: string) |
+| registerUserWithEmailPassword | Register a new user into your database using email/password | (email: string, password: string) |
+| logoutUser | Log out a user that is currently logged in | None |
+| getUserDetails | Get the details of a user that is currently in your database | None

@@ -5,7 +5,7 @@ export const siteConfig: SiteConfig = {
   description:
     "Re-auth is a next-generation, easy-to-use authentication and authorization solution for MongoDB and React applications! No backend even required!",
   url: "https://re-auth.com/",
-  ogImage: "https://tx.shadcn.com/og.jpg",
+  ogImage: "https://re-auth.com/",
   links: {
     twitter: "https://twitter.com/kaipereira_",
     github: "https://github.com/kaipereira",
