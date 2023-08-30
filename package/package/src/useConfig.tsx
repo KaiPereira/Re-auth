@@ -6,8 +6,7 @@ const useAuth = () => {
     
     const { apiKey } = useContext(AuthContext)
 
-    // const baseUrl = process.env.BASE_URL || "https://re-auth-production.up.railway.app/"
-    const baseUrl = "http://localhost:4000/"
+    const baseUrl = process.env.BASE_URL || "https://re-auth-production.up.railway.app/"
 
     axios.defaults.baseURL = baseUrl; // Replace with your API base URL
     axios.defaults.headers.common["Authorization"] = apiKey;
