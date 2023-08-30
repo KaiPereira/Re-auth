@@ -13,7 +13,7 @@ const useAuth = () => {
 
 
     const checkApiKey = () => {           
-        if (!apiKey) throw `No API Key was found! Remember to add it to your .env file under REAUTH_API_KEY`
+        if (!apiKey) throw `No API Key was found! Remember to configure it with the AuthProvider!`
     }
 
 
@@ -67,7 +67,7 @@ const useAuth = () => {
 
             const user = await axios.post("/user/user-details", {}, { withCredentials: true } as AxiosRequestConfig)
 
-            return user
+            return user.data
         } catch (err) {
             throw err
         }
