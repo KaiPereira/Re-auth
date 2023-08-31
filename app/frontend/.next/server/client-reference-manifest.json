@@ -1,13 +1,5 @@
 {
   "ssrModuleMapping": {
-    "(app-client)/./node_modules/next/dist/client/components/error-boundary.js": {
-      "*": {
-        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
     "(app-client)/./node_modules/next/dist/client/components/app-router.js": {
       "*": {
         "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
@@ -40,9 +32,9 @@
         "async": false
       }
     },
-    "(app-client)/./components/theme-provider.tsx": {
+    "(app-client)/./node_modules/next/dist/client/components/error-boundary.js": {
       "*": {
-        "id": "(sc_client)/./components/theme-provider.tsx",
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
         "name": "*",
         "chunks": [],
         "async": false
@@ -51,6 +43,14 @@
     "(app-client)/./components/ui/toaster.tsx": {
       "*": {
         "id": "(sc_client)/./components/ui/toaster.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./components/theme-provider.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/theme-provider.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -83,22 +83,6 @@
   },
   "edgeSSRModuleMapping": {},
   "clientModules": {
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\node_modules\\next\\dist\\client\\components\\error-boundary.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
-      "name": "*",
-      "chunks": [
-        "app-client-internals:static/chunks/app-client-internals.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
-      "name": "*",
-      "chunks": [
-        "app-client-internals:static/chunks/app-client-internals.js"
-      ],
-      "async": false
-    },
     "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\node_modules\\next\\dist\\client\\components\\app-router.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
       "name": "*",
@@ -163,6 +147,22 @@
       ],
       "async": false
     },
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\node_modules\\next\\dist\\client\\components\\error-boundary.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
     "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\node_modules\\next\\font\\google\\target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-sans\"}],\"variableName\":\"fontSans\"}": {
       "id": "(app-client)/./node_modules/next/font/google/target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-sans\"}],\"variableName\":\"fontSans\"}",
       "name": "*",
@@ -179,16 +179,16 @@
       ],
       "async": false
     },
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\components\\theme-provider.tsx": {
-      "id": "(app-client)/./components/theme-provider.tsx",
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\components\\ui\\toaster.tsx": {
+      "id": "(app-client)/./components/ui/toaster.tsx",
       "name": "*",
       "chunks": [
         "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
     },
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\components\\ui\\toaster.tsx": {
-      "id": "(app-client)/./components/ui/toaster.tsx",
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\components\\theme-provider.tsx": {
+      "id": "(app-client)/./components/theme-provider.tsx",
       "name": "*",
       "chunks": [
         "app/layout:static/chunks/app/layout.js"
