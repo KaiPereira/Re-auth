@@ -10,7 +10,6 @@ const useAuth = () => {
         signup(email, password)
             .then(res => {
                 setResponse("An email was sent to your inbox")
-                window.location.href = "/dashboard"
             })
             .catch(err => {
                 setError(err.response.data)
