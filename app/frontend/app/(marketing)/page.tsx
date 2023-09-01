@@ -18,7 +18,7 @@ export default async function IndexPage() {
             We're building the next-generation authentication solution for MongoDB developers!
            </p>
           <div className="space-x-4">
-            <Link href="/login" className={cn(buttonVariants({ size: "lg" }))}>
+            <Link href="/register" className={cn(buttonVariants({ size: "lg" }))}>
               Get Started
             </Link>
           </div>
