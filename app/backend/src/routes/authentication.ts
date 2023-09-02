@@ -65,7 +65,7 @@ router.post("/verify/:id/:token", async (req: Request, res: Response) => {
         await User.updateOne({ _id: user._id}, {verified: true});
         await Token.findByIdAndRemove(token._id);
         
-        jwtCreation(res, user, "Successfully registered and logged in!")
+        jwtCreation(res, user, "Successfully verified and logged in!")
     } catch (err) {
         console.log(err)
         res.status(400).send("An error occured");
