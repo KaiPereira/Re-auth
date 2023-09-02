@@ -49,7 +49,7 @@ router.post("/register", async (req: Request, res: Response) => {
     }
 })
 
-router.get("/verify/:id/:token", async (req: Request, res: Response) => {
+router.post("/verify/:id/:token", async (req: Request, res: Response) => {
     try {
         const user: UserType = await User.findOne({ _id: req.params.id });
 
@@ -65,7 +65,7 @@ router.get("/verify/:id/:token", async (req: Request, res: Response) => {
         await User.updateOne({ _id: user._id}, {verified: true});
         await Token.findByIdAndRemove(token._id);
         
-        jwtCreation(res, user, "Successfully registered!")
+        jwtCreation(res, user, "Successfully registered and logged in!")
     } catch (err) {
         console.log(err)
         res.status(400).send("An error occured");
@@ -88,7 +88,6 @@ router.post("/login", async (req: Request, res: Response) => {
         if (!validPass) return res.status(400).send("Invalid username or password!")
 
         jwtCreation(res, user, "Successfully logged in!")
-        
     } catch (err) {
         console.log(err)
         res.status(400).send("Unknown Error has Occured!")

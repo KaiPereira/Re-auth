@@ -16,7 +16,9 @@ export default function Page({ params }: {
     useListenForError({error: error, success: response})
 
     useEffect(() => {
-        handleVerification(params.userId, params.verificationToken)
+        if (!response && !error) {
+            handleVerification(params.userId, params.verificationToken)
+        }
 
         if (error) {
             setTimeout(() => {
@@ -25,7 +27,7 @@ export default function Page({ params }: {
         } else if (response) {
             router.push("/login")
         }
-    }, [response, error])
+    }, [error, response])
 
 
     return (

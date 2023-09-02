@@ -1,4 +1,4 @@
-// File: C:\Users\keira\Documents\VSCode Projects\Currently Working On\sentinel\app\frontend\app\(marketing)\page.tsx
+// File: C:\Users\keira\Documents\VSCode Projects\Currently Working On\re-auth\app\frontend\app\(marketing)\page.tsx
 import * as entry from '../../../../app/(marketing)/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

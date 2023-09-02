@@ -41,7 +41,7 @@ const useAuth = () => {
     const handleVerification = (userId: string, authToken: string) => {
         verifyEmail(userId, authToken)
             .then(res => {
-                setResponse("Successfully verified your email, please login now!")
+                setResponse("Successfully verified your email, logging you in now!")
             })
             .catch(err => {
                 setError(err.response.data)

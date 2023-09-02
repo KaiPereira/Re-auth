@@ -1,5 +1,13 @@
 {
   "ssrModuleMapping": {
+    "(app-client)/./node_modules/next/dist/client/components/error-boundary.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
     "(app-client)/./node_modules/next/dist/client/components/app-router.js": {
       "*": {
         "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
@@ -32,9 +40,9 @@
         "async": false
       }
     },
-    "(app-client)/./node_modules/next/dist/client/components/error-boundary.js": {
+    "(app-client)/./components/theme-provider.tsx": {
       "*": {
-        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "id": "(sc_client)/./components/theme-provider.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -43,14 +51,6 @@
     "(app-client)/./components/ui/toaster.tsx": {
       "*": {
         "id": "(sc_client)/./components/ui/toaster.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/theme-provider.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/theme-provider.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -79,75 +79,43 @@
         "chunks": [],
         "async": false
       }
+    },
+    "(app-client)/./components/user-auth-form.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/user-auth-form.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/(auth)/login/[userId]/[verificationToken]/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/(auth)/login/[userId]/[verificationToken]/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/(protected)/layout.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/(protected)/layout.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/(protected)/dashboard/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/(protected)/dashboard/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
     }
   },
   "edgeSSRModuleMapping": {},
   "clientModules": {
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\node_modules\\next\\dist\\client\\components\\app-router.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
-      "name": "*",
-      "chunks": [
-        "app-client-internals:static/chunks/app-client-internals.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
-      "name": "*",
-      "chunks": [
-        "app-client-internals:static/chunks/app-client-internals.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\node_modules\\next\\dist\\client\\components\\layout-router.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
-      "name": "*",
-      "chunks": [
-        "app-client-internals:static/chunks/app-client-internals.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\node_modules\\next\\dist\\esm\\client\\components\\layout-router.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
-      "name": "*",
-      "chunks": [
-        "app-client-internals:static/chunks/app-client-internals.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
-      "name": "*",
-      "chunks": [
-        "app-client-internals:static/chunks/app-client-internals.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\node_modules\\next\\dist\\esm\\client\\components\\render-from-template-context.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
-      "name": "*",
-      "chunks": [
-        "app-client-internals:static/chunks/app-client-internals.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\node_modules\\next\\dist\\client\\components\\static-generation-searchparams-bailout-provider.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
-      "name": "*",
-      "chunks": [
-        "app-client-internals:static/chunks/app-client-internals.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\node_modules\\next\\dist\\esm\\client\\components\\static-generation-searchparams-bailout-provider.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
-      "name": "*",
-      "chunks": [
-        "app-client-internals:static/chunks/app-client-internals.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\node_modules\\next\\dist\\client\\components\\error-boundary.js": {
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\node_modules\\next\\dist\\client\\components\\error-boundary.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
       "name": "*",
       "chunks": [
@@ -155,7 +123,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js": {
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
       "name": "*",
       "chunks": [
@@ -163,7 +131,71 @@
       ],
       "async": false
     },
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\node_modules\\next\\font\\google\\target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-sans\"}],\"variableName\":\"fontSans\"}": {
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\node_modules\\next\\dist\\client\\components\\app-router.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\node_modules\\next\\dist\\client\\components\\layout-router.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\node_modules\\next\\dist\\esm\\client\\components\\layout-router.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\node_modules\\next\\dist\\esm\\client\\components\\render-from-template-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\node_modules\\next\\dist\\client\\components\\static-generation-searchparams-bailout-provider.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\node_modules\\next\\dist\\esm\\client\\components\\static-generation-searchparams-bailout-provider.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\node_modules\\next\\font\\google\\target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-sans\"}],\"variableName\":\"fontSans\"}": {
       "id": "(app-client)/./node_modules/next/font/google/target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-sans\"}],\"variableName\":\"fontSans\"}",
       "name": "*",
       "chunks": [
@@ -171,7 +203,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\node_modules\\next\\font\\local\\target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"\",\"arguments\":[{\"src\":\"../assets/fonts/CalSans-SemiBold.woff2\",\"variable\":\"--font-heading\"}],\"variableName\":\"fontHeading\"}": {
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\node_modules\\next\\font\\local\\target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"\",\"arguments\":[{\"src\":\"../assets/fonts/CalSans-SemiBold.woff2\",\"variable\":\"--font-heading\"}],\"variableName\":\"fontHeading\"}": {
       "id": "(app-client)/./node_modules/next/font/local/target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"\",\"arguments\":[{\"src\":\"../assets/fonts/CalSans-SemiBold.woff2\",\"variable\":\"--font-heading\"}],\"variableName\":\"fontHeading\"}",
       "name": "*",
       "chunks": [
@@ -179,15 +211,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\components\\ui\\toaster.tsx": {
-      "id": "(app-client)/./components/ui/toaster.tsx",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\components\\theme-provider.tsx": {
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\components\\theme-provider.tsx": {
       "id": "(app-client)/./components/theme-provider.tsx",
       "name": "*",
       "chunks": [
@@ -195,7 +219,15 @@
       ],
       "async": false
     },
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\styles\\globals.css": {
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\components\\ui\\toaster.tsx": {
+      "id": "(app-client)/./components/ui/toaster.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\styles\\globals.css": {
       "id": "(app-client)/./styles/globals.css",
       "name": "*",
       "chunks": [
@@ -203,23 +235,23 @@
       ],
       "async": false
     },
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\node_modules\\next\\dist\\client\\link.js": {
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\node_modules\\next\\dist\\client\\link.js": {
       "id": "(app-client)/./node_modules/next/dist/client/link.js",
       "name": "*",
       "chunks": [
-        "app/(marketing)/page:static/chunks/app/(marketing)/page.js"
+        "app/(auth)/login/page:static/chunks/app/(auth)/login/page.js"
       ],
       "async": false
     },
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\node_modules\\next\\dist\\esm\\client\\link.js": {
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\node_modules\\next\\dist\\esm\\client\\link.js": {
       "id": "(app-client)/./node_modules/next/dist/client/link.js",
       "name": "*",
       "chunks": [
-        "app/(marketing)/page:static/chunks/app/(marketing)/page.js"
+        "app/(auth)/login/page:static/chunks/app/(auth)/login/page.js"
       ],
       "async": false
     },
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\components\\main-nav.tsx": {
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\components\\main-nav.tsx": {
       "id": "(app-client)/./components/main-nav.tsx",
       "name": "*",
       "chunks": [
@@ -227,20 +259,58 @@
       ],
       "async": false
     },
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\components\\mode-toggle.tsx": {
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\components\\mode-toggle.tsx": {
       "id": "(app-client)/./components/mode-toggle.tsx",
       "name": "*",
       "chunks": [
         "app/(marketing)/layout:static/chunks/app/(marketing)/layout.js"
       ],
       "async": false
+    },
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\components\\user-auth-form.tsx": {
+      "id": "(app-client)/./components/user-auth-form.tsx",
+      "name": "*",
+      "chunks": [
+        "app/(auth)/login/page:static/chunks/app/(auth)/login/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\app\\(auth)\\login\\[userId]\\[verificationToken]\\page.tsx": {
+      "id": "(app-client)/./app/(auth)/login/[userId]/[verificationToken]/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/(auth)/login/[userId]/[verificationToken]/page:static/chunks/app/(auth)/login/[userId]/[verificationToken]/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\app\\(protected)\\layout.tsx": {
+      "id": "(app-client)/./app/(protected)/layout.tsx",
+      "name": "*",
+      "chunks": [
+        "app/(protected)/layout:static/chunks/app/(protected)/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\app\\(protected)\\dashboard\\page.tsx": {
+      "id": "(app-client)/./app/(protected)/dashboard/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/(protected)/dashboard/page:static/chunks/app/(protected)/dashboard/page.js"
+      ],
+      "async": false
     }
   },
   "entryCSSFiles": {
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\layout": [
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\app\\layout": [
       "static/css/app/layout.css"
     ],
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(marketing)\\layout": [],
-    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\sentinel\\app\\frontend\\app\\(marketing)\\page": []
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\app\\(marketing)\\layout": [],
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\app\\(marketing)\\page": [],
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\app\\(auth)\\layout": [],
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\app\\(auth)\\register\\page": [],
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\app\\(auth)\\login\\[userId]\\[verificationToken]\\page": [],
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\app\\(auth)\\login\\page": [],
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\app\\(protected)\\layout": [],
+    "C:\\Users\\keira\\Documents\\VSCode Projects\\Currently Working On\\re-auth\\app\\frontend\\app\\(protected)\\dashboard\\page": []
   }
 }
