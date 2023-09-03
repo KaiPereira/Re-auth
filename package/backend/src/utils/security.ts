@@ -10,7 +10,7 @@ import crypto from "crypto"
 export const decryptString = (string: string) => {
     if (!process.env.ENCRYPTION_PASS) throw "No encryption pass specified"
     
-    const decryptedString = CryptoJS.AES.decrypt(string, process.env.ENCRYPTION_PASS);
+    const decryptedString = CryptoJS.AES.decrypt(string.toString(), process.env.ENCRYPTION_PASS);
 
     return decryptedString.toString(CryptoJS.enc.Utf8)
 }
@@ -59,7 +59,7 @@ export const compareHash = (string1: string, string2: string) => {
 export const encryptString = (string: string) => {
     if (!process.env.ENCRYPTION_PASS) throw "No encryption password specified on the backend."
 
-    const encryptedString = CryptoJS.AES.encrypt(string, process.env.ENCRYPTION_PASS);
+    const encryptedString = CryptoJS.AES.encrypt(JSON.stringify(string), process.env.ENCRYPTION_PASS);
 
     return encryptedString.toString()
 }

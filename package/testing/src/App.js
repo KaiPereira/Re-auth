@@ -27,7 +27,7 @@ function App() {
   }
 
   const loginUserHandler = async () => {
-    const loggedInUser = await loginUserWithEmailPassword()
+    const loggedInUser = await loginUserWithEmailPassword("kaipereira2020@gmail.com", "password")
 
     console.log(loggedInUser)
   }

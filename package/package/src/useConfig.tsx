@@ -6,7 +6,8 @@ const useAuth = () => {
     
     const { apiKey } = useContext(AuthContext)
 
-    const baseUrl = process.env.BASE_URL || "https://re-auth-production.up.railway.app/"
+    // const baseUrl = process.env.BASE_URL || "https://re-auth-production.up.railway.app/"
+    const baseUrl = "http://localhost:4000/"
 
     axios.defaults.baseURL = baseUrl; // Replace with your API base URL
     axios.defaults.headers.common["Authorization"] = apiKey;
@@ -34,7 +35,6 @@ const useAuth = () => {
 
     const registerUserWithEmailPassword = async (email: string, password: string) => {
         try {
-            console.log("BASE URL: ", process.env.BASE_URL)
             checkApiKey()
 
             const user = await axios.post("/auth/register", {

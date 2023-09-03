@@ -33,7 +33,7 @@ router.post("/register", async (req, res) => {
 router.post("/login", async (req, res) => {
     try {
         const user = await User.findOne({
-            email: req.body.email.toLowerCase()
+            email: req.body.email
         })
 
         // Check if user exists
@@ -46,6 +46,7 @@ router.post("/login", async (req, res) => {
 
         jwtCreation(res, user, "Successfully logged in!")
     } catch (err) {
+        console.log(err)
         res.status(400).send("Unknown Error has Occured!")
     }
 })
