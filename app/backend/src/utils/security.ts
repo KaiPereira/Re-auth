@@ -30,9 +30,9 @@ const encryptString = (string: string) => {
 const decryptString = (string: string) => {
     if (!process.env.ENCRYPTION_PASS) throw "An encryption password wasn't specified on the backend!"
 
-    const decryptedString = CryptoJS.AES.decrypt(string.toString(), process.env.ENCRYPTION_PASS);
+    const decryptedWordArray = CryptoJS.AES.decrypt(string.toString(), process.env.ENCRYPTION_PASS);
 
-    return decryptedString.toString(CryptoJS.enc.Utf8)
+    return decryptedWordArray.toString(CryptoJS.enc.Utf8)
 }
 
 // Create api key through UUID and hashing the UUID with sha256

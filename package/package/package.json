@@ -1,6 +1,6 @@
 {
   "name": "re-authenticate",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Authentication for MongoDB and React",
   "author": "kaipereira",
   "license": "none",

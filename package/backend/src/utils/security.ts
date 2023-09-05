@@ -18,7 +18,7 @@ export const decryptString = (string: string) => {
 
 export const connectToUserDb = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        let apiKey = req.headers.authorization
+        const apiKey = req.headers.authorization
 
         if (!apiKey) return res.status(401).send("An api key is required!")
 

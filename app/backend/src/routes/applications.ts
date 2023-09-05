@@ -158,8 +158,6 @@ router.post("/get-app-via-key", async (req: Request, res: Response) => {
 
         // The api key is encrypted when it comes in so we decrypt it
         let apiKey = req.body.apiKey
-        apiKey = decryptString(apiKey)
-
 
         const userDetails = users.map((user) => {
             return user.applications.find((application) => {
