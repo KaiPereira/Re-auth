@@ -7,7 +7,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <AuthProvider
-      apiKey="481c0625-4746-440f-b1bd-de4d7daac845"
+      apiKey="39d23102-044f-4d34-95bc-3d8627d2394c"
     >
       <App />
     </AuthProvider>
