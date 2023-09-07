@@ -28,6 +28,8 @@ export const connectToUserDb = async (req: Request, res: Response, next: NextFun
             apiKey: apiKey
         })
 
+        console.log("DATA: ", data)
+
         if (!data) return res.status(400).send("Invalid API Key!")
 
         const mongoDbSrv = decryptString(data.srvString)

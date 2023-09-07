@@ -160,22 +160,21 @@ router.post("/get-app-via-key", async (req: Request, res: Response) => {
         // The api key is encrypted when it comes in so we decrypt it
         let apiKey = req.body.apiKey
 
-        // Kinda sus code tbh
-        const getAppDetails = users.map((user) => {
-            return user.applications.find((application) => {
-                return application.apiKeys.map(async (apiKeyObj) => {
-                    const appApiKeyTest = await compareHash(apiKey, apiKeyObj.hashed)
+        for (let z = 0; z < users.length; z++) {
+            for (let y = 0; y < users[z].applications.length; y++) {
 
-                    console.log(appApiKeyTest)
+                await Promise.all(
+                    users[z].applications[y].apiKeys.map(async (appApiKey: any) => {
+                        const apiKeyTest = await compareHash(apiKey, appApiKey.hashed)
+                        console.log(apiKeyTest)
+    
+                        appDetails = users[z].applications[y]
+                        return apiKeyTest
+                    })
+                )
 
-                    if (appApiKeyTest) appDetails = application
-                })
-            })
-        })
-
-        await Promise.all(getAppDetails)
-
-        console.log("APP DETAILS: ", appDetails)
+            }
+        }
 
         if (!appDetails) res.status(400).send("No application found for this key!")
         
