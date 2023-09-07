@@ -154,22 +154,31 @@ router.post("/delete-app", verifyUserToken, async (req: Request, res: Response) 
 router.post("/get-app-via-key", async (req: Request, res: Response) => {
     try {
 
+        var appDetails;
         const users: UserType[] = await User.find()
 
         // The api key is encrypted when it comes in so we decrypt it
         let apiKey = req.body.apiKey
 
-        const userDetails = users.map((user) => {
-            return user.applications.find((application) => {
-                return application.apiKeys.find((apiKeyObj) => {
-                    return compareHash(apiKey, apiKeyObj.hashed)
-                })
-            })
-        })
+        for (let z = 0; z < users.length; z++) {
+            for (let y = 0; y < users[z].applications.length; y++) {
 
-        if (!userDetails) res.status(400).send("No application found for this key!")
+                await Promise.all(
+                    users[z].applications[y].apiKeys.map(async (appApiKey: any) => {
+                        const apiKeyTest = await compareHash(apiKey, appApiKey.hashed)
+                        console.log(apiKeyTest)
+    
+                        appDetails = users[z].applications[y]
+                        return apiKeyTest
+                    })
+                )
+
+            }
+        }
+
+        if (!appDetails) res.status(400).send("No application found for this key!")
         
-        res.send(userDetails[0])
+        res.send(appDetails)
     } catch (err) {
         console.log(err)
         res.status(400).send(err)
