@@ -166,9 +166,9 @@ router.post("/get-app-via-key", async (req: Request, res: Response) => {
                 await Promise.all(
                     users[z].applications[y].apiKeys.map(async (appApiKey: any) => {
                         const apiKeyTest = await compareHash(apiKey, appApiKey.hashed)
-                        console.log(apiKeyTest)
     
                         appDetails = users[z].applications[y]
+                        
                         return apiKeyTest
                     })
                 )

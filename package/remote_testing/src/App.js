@@ -1,6 +1,25 @@
 import { useAuth } from "re-authenticate";
+import { useState } from "react";
 
 function App() {
+  const [loginStuff, setLoginStuff] = useState({
+    email: "",
+    password: ""
+  })
+
+
+  const handleInputs = (event) => {
+    const { name, value } = event.target;
+
+    setLoginStuff((prevState) => ({
+      ...prevState,
+      [name]: value
+    }))
+  }
+
+  console.log(loginStuff)
+
+
   const { 
     registerUserWithEmailPassword, 
     loginUserWithEmailPassword, 
@@ -9,7 +28,7 @@ function App() {
   } = useAuth()
 
   const registerUser = async () => {
-    const newUser = await registerUserWithEmailPassword("kaipereira2020@gmail.com", "password")
+    const newUser = await registerUserWithEmailPassword(loginStuff.email, loginStuff.password)
   
     console.log(newUser)
   }
@@ -21,7 +40,7 @@ function App() {
   }
 
   const loginUser = async () => {
-    const loggedInUser = await loginUserWithEmailPassword("kaipereira2020@gmail.com", "password")
+    const loggedInUser = await loginUserWithEmailPassword(loginStuff.email, loginStuff.password)
 
     console.log(loggedInUser)
   }
@@ -34,6 +53,8 @@ function App() {
 
   return (
     <>
+      <input type="text" name="email" placeholder="email" onChange={handleInputs} />
+      <input type="password" name="password" placeholder="password" onChange={handleInputs} /> <br /><br />
       <button onClick={registerUser}>Register User!</button>
       <button onClick={userDetailsHandler}>Get User Details!</button>
       <button onClick={loginUser}>Logging user</button>
