@@ -10,7 +10,6 @@ const hashString = (string: string) => {
 }
 
 const compareHash = async (string1: string, string2: string) => {
-    console.log(string2)
     const comparedStrings = await bcrypt.compare(string1, string2)
 
     return comparedStrings

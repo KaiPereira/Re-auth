@@ -21,7 +21,7 @@ const useAuth = () => {
         try {
             checkApiKey()
 
-            const user = await axios.post("/auth/login", {
+            const user = await axios.post("/auth/email-password/login", {
                 email: email,
                 password: password
             }, { withCredentials: true } as AxiosRequestConfig)
@@ -36,7 +36,7 @@ const useAuth = () => {
         try {
             checkApiKey()
 
-            const user = await axios.post("/auth/register", {
+            const user = await axios.post("/auth/email-password/register", {
                 email: email,
                 password: password,
                 loginUrl: process.env.LOGIN_URL

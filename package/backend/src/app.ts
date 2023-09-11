@@ -36,8 +36,16 @@ app.listen(port, () => {
 
 app.use(connectToUserDb);
 
+// Authentication stuff
+
+// General Authentication
 import authentication from "./routes/authentication"
 app.use("/auth/", authentication)
+
+// Authentication Methods
+import email_password from "./routes/methods/email-password"
+app.use("/auth/email-password/", email_password)
+
 
 import user from "./routes/user"
 app.use("/user/", user)
