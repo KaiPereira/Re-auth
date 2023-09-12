@@ -20,7 +20,7 @@ const compareHash = async (string1: string, string2: string) => {
 const encryptString = (string: string) => {
     if (!process.env.ENCRYPTION_PASS) throw "An encryption password wasn't specified on the backend!"
 
-    const encryptedString = CryptoJS.AES.encrypt(JSON.stringify(string), process.env.ENCRYPTION_PASS);
+    const encryptedString = CryptoJS.AES.encrypt(string, process.env.ENCRYPTION_PASS);
 
     return encryptedString.toString()
 }
@@ -30,7 +30,7 @@ const encryptString = (string: string) => {
 const decryptString = (string: string) => {
     if (!process.env.ENCRYPTION_PASS) throw "An encryption password wasn't specified on the backend!"
 
-    const decryptedWordArray = CryptoJS.AES.decrypt(string.toString(), process.env.ENCRYPTION_PASS);
+    const decryptedWordArray = CryptoJS.AES.decrypt(string, process.env.ENCRYPTION_PASS);
 
     return decryptedWordArray.toString(CryptoJS.enc.Utf8)
 }

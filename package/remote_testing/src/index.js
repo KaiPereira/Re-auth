@@ -6,7 +6,7 @@ import { AuthProvider } from "re-authenticate"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <AuthProvider
-    apiKey="23f986e4-1df5-4301-84c3-cf3bf0005071"
+    apiKey="c2bdac0c-58bb-49fd-ad84-4a196b256cc0"
   >
     <React.StrictMode>
       <App />
