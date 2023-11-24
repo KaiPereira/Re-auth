@@ -1,0 +1,21 @@
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+self["webpackHotUpdate_N_E"]("app/(marketing)/layout",{
+
+/***/ "(app-client)/./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%2Fworkspaces%2FRe-auth%2Fapp%2Ffrontend%2Fcomponents%2Fmain-nav.tsx&modules=%2Fworkspaces%2FRe-auth%2Fapp%2Ffrontend%2Fcomponents%2Fmode-toggle.tsx&modules=%2Fworkspaces%2FRe-auth%2Fapp%2Ffrontend%2Fnode_modules%2Fnext%2Fdist%2Fclient%2Flink.js&server=false!":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%2Fworkspaces%2FRe-auth%2Fapp%2Ffrontend%2Fcomponents%2Fmain-nav.tsx&modules=%2Fworkspaces%2FRe-auth%2Fapp%2Ffrontend%2Fcomponents%2Fmode-toggle.tsx&modules=%2Fworkspaces%2FRe-auth%2Fapp%2Ffrontend%2Fnode_modules%2Fnext%2Fdist%2Fclient%2Flink.js&server=false! ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+
+eval(__webpack_require__.ts("Promise.resolve(/*! import() eager */).then(__webpack_require__.bind(__webpack_require__, /*! ./components/main-nav.tsx */ \"(app-client)/./components/main-nav.tsx\"));\nPromise.resolve(/*! import() eager */).then(__webpack_require__.bind(__webpack_require__, /*! ./components/mode-toggle.tsx */ \"(app-client)/./components/mode-toggle.tsx\"));\nPromise.resolve(/*! import() eager */).then(__webpack_require__.t.bind(__webpack_require__, /*! ./node_modules/next/dist/client/link.js */ \"(app-client)/./node_modules/next/dist/client/link.js\", 23))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwcC1jbGllbnQpLy4vbm9kZV9tb2R1bGVzL25leHQvZGlzdC9idWlsZC93ZWJwYWNrL2xvYWRlcnMvbmV4dC1mbGlnaHQtY2xpZW50LWVudHJ5LWxvYWRlci5qcz9tb2R1bGVzPSUyRndvcmtzcGFjZXMlMkZSZS1hdXRoJTJGYXBwJTJGZnJvbnRlbmQlMkZjb21wb25lbnRzJTJGbWFpbi1uYXYudHN4Jm1vZHVsZXM9JTJGd29ya3NwYWNlcyUyRlJlLWF1dGglMkZhcHAlMkZmcm9udGVuZCUyRmNvbXBvbmVudHMlMkZtb2RlLXRvZ2dsZS50c3gmbW9kdWxlcz0lMkZ3b3Jrc3BhY2VzJTJGUmUtYXV0aCUyRmFwcCUyRmZyb250ZW5kJTJGbm9kZV9tb2R1bGVzJTJGbmV4dCUyRmRpc3QlMkZjbGllbnQlMkZsaW5rLmpzJnNlcnZlcj1mYWxzZSEiLCJtYXBwaW5ncyI6IkFBQUEscUtBQTZGO0FBQzdGLDJLQUFnRztBQUNoRyIsInNvdXJjZXMiOlsid2VicGFjazovL19OX0UvPzJlMGQiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0KC8qIHdlYnBhY2tNb2RlOiBcImVhZ2VyXCIgKi8gXCIvd29ya3NwYWNlcy9SZS1hdXRoL2FwcC9mcm9udGVuZC9jb21wb25lbnRzL21haW4tbmF2LnRzeFwiKTtcbmltcG9ydCgvKiB3ZWJwYWNrTW9kZTogXCJlYWdlclwiICovIFwiL3dvcmtzcGFjZXMvUmUtYXV0aC9hcHAvZnJvbnRlbmQvY29tcG9uZW50cy9tb2RlLXRvZ2dsZS50c3hcIik7XG5pbXBvcnQoLyogd2VicGFja01vZGU6IFwiZWFnZXJcIiAqLyBcIi93b3Jrc3BhY2VzL1JlLWF1dGgvYXBwL2Zyb250ZW5kL25vZGVfbW9kdWxlcy9uZXh0L2Rpc3QvY2xpZW50L2xpbmsuanNcIikiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(app-client)/./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%2Fworkspaces%2FRe-auth%2Fapp%2Ffrontend%2Fcomponents%2Fmain-nav.tsx&modules=%2Fworkspaces%2FRe-auth%2Fapp%2Ffrontend%2Fcomponents%2Fmode-toggle.tsx&modules=%2Fworkspaces%2FRe-auth%2Fapp%2Ffrontend%2Fnode_modules%2Fnext%2Fdist%2Fclient%2Flink.js&server=false!\n"));
+
+/***/ })
+
+});

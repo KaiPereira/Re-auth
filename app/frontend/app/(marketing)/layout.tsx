@@ -15,6 +15,9 @@ export default async function MarketingLayout({
 }: MarketingLayoutProps) {
   return (
     <div className="flex min-h-screen flex-col">
+      <div className="w-full h-6 bg-red-500 flex justify-center items-center text-sm">
+        Due to server costs, Re-Auth servers have been stopped!
+      </div>
       <header className="container z-40 bg-background">
         <div className="flex h-20 items-center justify-between py-6">
           <MainNav items={marketingConfig.mainNav} />
